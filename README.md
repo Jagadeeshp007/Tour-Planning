@@ -19,6 +19,6 @@ step 6 : type command
     
     compile successfully and run your front end project
   
-step 7 : then goto browser type url "localhost:4200" to display your project
+step 7 : then goto browser type url **localhost:4200** to display your project
 
 _Note: before you run back-end after run front-end_
