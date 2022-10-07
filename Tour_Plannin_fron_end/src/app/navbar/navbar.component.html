@@ -1,0 +1,7 @@
+<div class="navbar">
+    <!-- <label [hidden]="!nav.isLogin">Welcome {{userName}}</label> -->
+    <a routerLink="/add" *ngIf="nav.isLogin && nav.admin">Add Tour</a>
+    <a routerLink="/list" [hidden]="!nav.isLogin">List Tour</a>
+    <a (click)="logout()" id="logoutBtn" [hidden]="!nav.isLogin">Logout</a>
+    <a routerLink="/login" [hidden]="nav.isLogin">Login</a>
+</div>

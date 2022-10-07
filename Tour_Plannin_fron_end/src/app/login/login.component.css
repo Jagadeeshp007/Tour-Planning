@@ -1,0 +1,74 @@
+.container {
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 100%;
+}
+
+.card {
+  margin: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 5px;
+  
+}
+
+.card-body {
+  padding: 1rem 1rem;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0.125, 0, 0, 0.125);
+}
+
+.center {
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.group {
+  margin: 1rem;
+}
+
+label {
+  font-size: 20px;
+}
+
+button {
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+span{
+  color: red;
+  font-weight: bold;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.btnGreen {
+  background-color: #28a745;
+  margin-right: 60px;
+}
+
+.btnBlue {
+  background-color: #17a2b8;
+  margin-left: 60px;
+}

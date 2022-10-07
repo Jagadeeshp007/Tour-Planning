@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="center text-primary">Tour List</h2>
+    <div class="table">
+        <div class="row1">
+            <label>From Place</label>
+            <label>To Place</label>
+            <label>Duration</label>
+            <label>Hours</label>
+            <label class="center">Action</label>
+        </div>
+        <div class="row2" *ngFor="let tour of tourDetail|async">
+            <label>{{tour.fromPlace}}</label>
+            <label>{{tour.toPlace}}</label>
+            <label>{{tour.duration}}</label>
+            <label>{{tour.hours}}</label>
+            <label class="center">
+                <button (click)="detail(tour.id)" [hidden]="!nav.user" class="btnLight">Details</button>
+                <button (click)="update(tour.id)" [hidden]="!nav.admin" class="btnBlue">Update</button>
+                <button (click)="deleteTour(tour.id)" [hidden]="!nav.admin" class="btnRed">Delete</button>
+            </label>
+        </div>
+    </div>
+</div>

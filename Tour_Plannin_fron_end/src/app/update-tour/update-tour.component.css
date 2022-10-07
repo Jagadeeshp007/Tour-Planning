@@ -1,0 +1,56 @@
+.container {
+    padding: 0% 5%;
+}
+
+.row {
+    display: flex;
+
+}
+
+.column1 {
+    flex: 25%;
+}
+
+.column2 {
+    flex: 50%;
+
+}
+
+input {
+    width: 90%;
+    padding: 6px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.group {
+    margin: 1rem;
+}
+
+label {
+    font-size: 20px;
+}
+
+button {
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.btnGreen {
+    background-color: #28a745;
+    margin-right: 60px;
+}
+
+.btnRed {
+    background-color: #dc3545;
+    margin-left: 60px;
+}

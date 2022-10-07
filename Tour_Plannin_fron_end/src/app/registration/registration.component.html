@@ -1,0 +1,66 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="regForm">
+    <h2 class="center text-primary">Registration Form</h2>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col">
+            <div class="group">
+                <label>First Name :</label>
+                <input type="text" name="firstName" formControlName="firstName" />
+                <span *ngIf="check('firstName')">First Name is required</span>
+                <span *ngIf="checkLength('firstName')">First Name must be atleast 4 to 15 Character</span>
+
+            </div>
+            <div class="group">
+                <label>User Name :</label>
+                <input type="text" name="userName" formControlName="userName" />
+                <span *ngIf="check('userName')">User Name is required</span>
+                <span *ngIf="regForm.get('userName')?.errors?.['pattern']">First Letter Should be Capital</span><br/>
+                <span *ngIf="checkLength('userName')">User Name must be atleast 6 to 15 Character</span>
+            </div>
+            <div class="group">
+                <label>Email ID :</label>
+                <input type="text" name="emailId" formControlName="emailId" />
+                <span *ngIf="check('emailId')">Email ID is required</span>
+                <span *ngIf="regForm.get('emailId')?.errors?.['pattern']">Please Enter Valid Email Id</span>
+            </div>
+            <div class="group">
+                <label>Mobile Number :</label>
+                <input type="text" name="mobile" formControlName="mobile" />
+                <span *ngIf="check('mobile')">Mobile Number is required</span>
+                <span *ngIf="regForm.get('mobile')?.errors?.['pattern']">Please Enter Valid Mobile Number</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="group">
+                <label>Last Name :</label>
+                <input type="text" name="lastName" formControlName="lastName" />
+               <span *ngIf="checkLength('lastName')">Last Name must be atleast 2 to 8 Character</span>
+            </div>
+            <div class="group">
+                <label>Password :</label>
+                <input type="password" name="password" formControlName="password" />
+                <span *ngIf="check('password')">password is required</span>
+                <span *ngIf="regForm.get('password')?.errors?.['pattern']">Password must be atleast 6 to 12 characters<br/> one uppercase, one lowercase, one numeric value</span>
+            </div>
+            <div class="group">
+                <label>Location :</label>
+                <input type="text" name="loc" formControlName="loc" />
+            </div>
+            <div class="group">
+                <label>Role Type : </label>
+                <select name="role" formControlName="role">
+                    <option selected>Select Role</option>
+                    <option value="user">USER</option>
+                    <option value="admin">ADMIN</option>
+                </select><br />
+                <span *ngIf="check('role')">role is required</span>
+            </div>
+        </div>
+        <div class="col-2"> </div>
+    </div>
+    <br />
+    <div class="center">
+        <button type="submit" class="btnGreen">Submit</button>
+        <button type="reset" (click)="resetBtn()" class="btnRed">Reset</button>
+    </div>
+</form>

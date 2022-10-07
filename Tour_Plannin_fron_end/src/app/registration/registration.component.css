@@ -1,0 +1,58 @@
+.row {
+  display: flex;
+}
+.col {
+  flex: 50%;
+}
+.col-2 {
+  flex: 20%;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-primary {
+  color: blue;
+}
+
+input,select {
+  width: 90%;
+  padding: 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+
+.group{
+  margin: 0.5rem;
+}
+label {
+  font-size: 20px;
+}
+
+button{
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+button:hover{
+  opacity: 0.8;
+}
+span{
+  color: red;
+  font-weight: bold;
+}
+.btnGreen{
+  background-color: #28a745;
+  margin-right: 60px;
+}
+
+.btnRed {
+  background-color: #dc3545;
+  margin-left: 60px;
+}

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="center">Login Page</h3>
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                        <div class="group">
+                            <label>UserName :</label>
+                            <input type="text" name="userName" formControlName="userName" />
+                            <span *ngIf="check('userName')">user Name is required</span>
+                        </div>
+                        <div class="group">
+                            <label>Password :</label>
+                            <input type="password" name="password" formControlName="password" />
+                            <span *ngIf="check('password')">password is required</span>
+                        </div>
+                        <br />
+                        <div>
+                        </div>
+                        <div class="center">
+                            <button type="submit" class="btnGreen">Sign IN</button>
+                            <button type="button" (click)="reg()" class="btnBlue">Sign
+                                UP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
